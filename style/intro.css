@@ -1,0 +1,78 @@
+/* https://www.youtube.com/watch?v=Nloq6uzF8RQ */
+
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+#root {
+   animation: 1300ms ease-in 400ms 1 slideInFromTop;
+}
+
+#intro {
+    position: relative; 
+}
+
+#intro::before {
+    content: "";
+    background-image: url("../assests/test2.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.85;
+}
+
+span {
+    background-color: black;
+    padding: 1%;
+}
+
+h1, h3, h2, p {
+    position: inherit;
+    text-align: center;
+    color: darkcyan;    
+}
+
+h1 {
+    padding-top: 15%;
+    font-size: 5vw;
+}
+
+h2 {
+    font-size: 4vw;
+}
+
+h3 {
+    font-size: 3vw;
+}
+
+p {
+    padding: 4%;
+    padding-bottom: 40%;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+* {
+    font-family: 'Helvetica Neue';
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    /* font-size: 100%; */
+    vertical-align: baseline;
+    background: transparent;
+}

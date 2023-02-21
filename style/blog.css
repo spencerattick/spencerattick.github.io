@@ -1,0 +1,39 @@
+#blog {
+    padding-bottom: 20%;
+}
+
+#blog-posts {
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+.post {
+    width: 70%;
+    border-right: 0.5px solid;
+    margin: 1%;
+    padding-right: 4%;
+}
+
+#blog-posts > div:last-child {
+    border-right: 0px;
+}
+
+.post img {
+    width: 100%;
+    height: 40%;
+}
+
+.post p {
+    color: black;
+    font-size: 1.5vw;
+    padding-bottom: 10px;
+}
+
+.post a {
+    text-decoration: none;
+}
+
+.date {
+    font-weight: 300;
+}

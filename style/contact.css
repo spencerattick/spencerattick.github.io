@@ -1,0 +1,25 @@
+#contact {
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    /* padding-top: 2%; */
+    /* padding-bottom: 2%; */
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    max-height: 6%;
+    padding-bottom: 3%;
+}
+
+.contactIcon {
+    color: darkcyan;
+    /* font-size: max(3vw, 30px); */
+    font-size: 3vw;
+    transition: 200ms;
+}
+
+.contactIcon:hover {
+    font-size: 4vw;
+}

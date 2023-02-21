@@ -1,0 +1,38 @@
+#tech-stack {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.techIconDiv {
+    padding: 8%;
+}
+
+.techIcon {
+    font-size: 7vw;
+    padding: 10%;
+    transition: 300ms;
+}
+
+/* .techIcon:hover {
+    font-size: 8vw;
+    color: darkcyan;
+} */
+
+.techIcon:hover + .hide {
+    visibility: visible;
+    font-size: 8vw;
+    color: darkcyan;
+  }
+
+.hide {
+    visibility: hidden;
+    transition: 300ms;
+  }
+
+  #tech-stack p {
+    font-size: 2vw;
+    text-align: center;
+  }
+
