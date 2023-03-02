@@ -49,7 +49,6 @@ function getDate(time) {
       try {
         const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/posts`);
         const data = await response.json();
-        console.log(data)
         setBlogPosts(data);
       } catch (error) {
         console.log(error)

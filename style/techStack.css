@@ -6,19 +6,15 @@
 }
 
 .techIconDiv {
-    padding: 8%;
+    padding: 6%;
 }
 
 .techIcon {
-    font-size: 7vw;
-    padding: 10%;
+    font-size: 8vw;
+    padding: 6%;
     transition: 300ms;
 }
 
-/* .techIcon:hover {
-    font-size: 8vw;
-    color: darkcyan;
-} */
 
 .techIcon:hover + .hide {
     visibility: visible;
@@ -26,13 +22,14 @@
     color: darkcyan;
   }
 
-.hide {
+/* .hide {
     visibility: hidden;
     transition: 300ms;
-  }
+  } */
 
   #tech-stack p {
     font-size: 2vw;
     text-align: center;
+    padding-right: 5%;
   }
 
