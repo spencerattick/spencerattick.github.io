@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import '../style/goodreads.css'
 
+// [ ] add date of book finished
+// [ ] add link to see more 
+ 
 export default function GoodReads() {
 
   const [goodReadsFeed, setGoodReadsFeed] = useState([]);
@@ -42,7 +45,7 @@ export default function GoodReads() {
     const secondId = parsedImg.split('/')[2].split('.')[0];
 
     const imgURL = `https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/${firstId}/${secondId}.jpg`;
-    
+
     return imgURL;
   }
 
@@ -53,23 +56,25 @@ export default function GoodReads() {
     return (
         <div id="goodreads">
             <h2>Currently Reading</h2>
-            {goodReadsFeed.items ? (
-                goodReadsFeed.items.map((book, key) => {
-                    const bookImg = getBookImg(book);
-                    const bookTitle = getBookTitle(book);
-                    if (book.title.includes('wants to read')) {
-                        return;
-                    }
-                    return (
-                    <div key={key}>
-                        <p>{bookTitle}</p>
-                        <img src={bookImg} alt="" />
-                    </div>
-                    );
-                })
-                ) : (
-                 <div>Loading...</div>
+            <div id="goodreads-container">
+                {goodReadsFeed.items ? (
+                    goodReadsFeed.items.map((book, key) => {
+                        const bookImg = getBookImg(book);
+                        const bookTitle = getBookTitle(book);
+                        if (book.title.includes('wants to read')) {
+                            return;
+                        }
+                        return (
+                        <div key={key} className="book-div">
+                            <img src={bookImg} alt="" />
+                            {/* <p>{bookTitle}</p> */}
+                        </div>
+                        );
+                    })
+                    ) : (
+                    <div>Loading...</div>
                 )}
+            </div>
         </div>
     )
 }

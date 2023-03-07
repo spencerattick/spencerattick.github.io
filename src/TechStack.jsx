@@ -76,8 +76,9 @@ export default function TechStack() {
             <h2>TECH STACK</h2>
             <div id="tech-stack">
                 {techStack.map((tech) => 
-                    <div    className="techIconDiv"
-                    key={tech.name} 
+                    <div    
+                        className="techIconDiv"
+                        key={tech.name} 
                     >
                          <FontAwesomeIcon 
                     className="techIcon" 

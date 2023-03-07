@@ -4,7 +4,7 @@ import '../style/blog.css';
 
 // [] design each component that will display this information
 // [] maybe work it out so that a randomized 6 articles display?
-
+// [] add border-box shading (or whatever its called) to make each one look like a card rather than flat on the page
 
 
 export default function Blog() {
