@@ -7,11 +7,10 @@ export default defineConfig({
     rollupOptions: {
       output: {
         format: 'esm',
-        mimeTypes: {
-          'application/javascript': ['js', 'jsx'],
-        },
       },
     },
+    minify: true, // optional
+    brotliSize: false, // optional
   },
   server: {
     proxy: {
@@ -20,6 +19,9 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
+    },
+    mimeTypes: {
+      'text/javascript': ['js', 'jsx'],
     },
   },
 })
