@@ -3,6 +3,8 @@ import '../style/goodreads.css'
 
 // [ ] add date of book finished
 // [ ] add link to see more 
+// [ ] when I add a bunch of books I WANT to read to the list then all the books I have read are pushed out (looks like it only returns 10)
+// [ ] need to handle serving the Wants to Read books too but should specifiy which is which
  
 export default function GoodReads() {
 
@@ -21,6 +23,7 @@ export default function GoodReads() {
       const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/feed`);
       const data = await response.json();
       setGoodReadsFeed(data);
+    //    console.log(data.items)
     } catch (error) {
       console.log(error)
       setError(error);
@@ -61,9 +64,9 @@ export default function GoodReads() {
                     goodReadsFeed.items.map((book, key) => {
                         const bookImg = getBookImg(book);
                         const bookTitle = getBookTitle(book);
-                        if (book.title.includes('wants to read')) {
-                            return;
-                        }
+                        // if (book.title.includes('wants to read')) {
+                        //     return;
+                        // }
                         return (
                         <div key={key} className="book-div">
                             <img src={bookImg} alt="" />

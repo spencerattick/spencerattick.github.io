@@ -18,7 +18,7 @@ export default function App() {
             <TechStack />
             <Projects />
             <Blog />
-            {/* <GoodReads /> */}
+            <GoodReads />
             <Contact />
         </div>
     )
