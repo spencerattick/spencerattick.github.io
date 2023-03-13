@@ -3,7 +3,6 @@ import '../style/goodreads.css'
 
 // [ ] add date of book finished
 // [ ] add link to see more 
-// [ ] when I add a bunch of books I WANT to read to the list then all the books I have read are pushed out (looks like it only returns 10)
 // [ ] need to handle serving the Wants to Read books too but should specifiy which is which
  
 export default function GoodReads() {
@@ -30,12 +29,31 @@ export default function GoodReads() {
     }
   }
 
-  function getBookTitle(book) {
-    const title = book.title;
-    const parsedTitle = title.substring(title.indexOf("'") + 1, title.length - 1);
+//   function getBookTitle(book) {
+//     const title = book.title;
+//     const parsedTitle = title.substring(title.indexOf("'") + 1, title.length - 1);
 
-    return parsedTitle;
+//     return parsedTitle;
+//   }
+
+  const getDate = time => {
+    const parsedTimestamp = time.toString().slice(0, -3);
+    const date = new Date(parsedTimestamp * 1000).toDateString();
+    const splitDate = date.split(' ');
+    return `${splitDate[1]} ${splitDate[2]} ${splitDate[3]}`;
+  } 
+  
+  const textToDisplay = item => {
+    let text;
+    console.log(item)
+    if (item.title.includes('wants to read')) {
+      text = 'want to read'
+    } if (item.title.includes('finished reading')) {
+      text = `finished on ${getDate(item.created)}`
+    }
+    return text;
   }
+  
 
   function getBookImg(book) {
     const description = book.description;
@@ -63,14 +81,15 @@ export default function GoodReads() {
                 {goodReadsFeed.items ? (
                     goodReadsFeed.items.map((book, key) => {
                         const bookImg = getBookImg(book);
-                        const bookTitle = getBookTitle(book);
-                        // if (book.title.includes('wants to read')) {
-                        //     return;
-                        // }
+                        // const bookTitle = getBookTitle(book);
+                        const text = textToDisplay(book);
                         return (
                         <div key={key} className="book-div">
-                            <img src={bookImg} alt="" />
-                            {/* <p>{bookTitle}</p> */}
+                            <a href={book.link} target="_blank">
+                                <img src={bookImg} alt="" />
+                                <p>{text}</p>
+                            </a>
+                          
                         </div>
                         );
                     })

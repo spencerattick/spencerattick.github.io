@@ -1,22 +1,34 @@
-#goodreads img {
-    /* display: block; */
-    padding: 10%;
-    /* text-align: center; */
-    max-width: 100%;
-    height: 25%; 
-}
-
 #goodreads-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-}
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 15%;
+  }
+  
+  .book-div {
+    width: auto;
+    height: 130px;
+    padding: 3%;
+  }
+  
+  .book-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-.book-div {
-    padding: 6%;
-}
+  #goodreads h2 {
+    padding-bottom: 3%;
+  }
 
-/* .book-div p {
-    font-size: 1em;
-} */
+  #goodreads p {
+    font-size: 2%;
+    color: #000;
+    /* font-style: italic; */
+    font-weight: 300;
+  }
 
+  #goodreads a {
+    text-decoration: none;
+  }

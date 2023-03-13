@@ -14,7 +14,7 @@
 }
 
 .contactIcon {
-    color: darkcyan;
+    color: black;
     /* font-size: max(3vw, 30px); */
     font-size: 3vw;
     transition: 200ms;
