@@ -18,6 +18,11 @@
     position: relative; 
 }
 
+.underline {
+    border-bottom: 4px solid #FF5349;
+    border-radius: 10px;
+}
+
 #intro::before {
     content: "";
     background-image: url("../assests/test2.png");

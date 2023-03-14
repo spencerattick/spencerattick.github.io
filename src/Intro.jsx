@@ -18,17 +18,17 @@ export default function Intro() {
     return (
         <div id='intro'>
           <h1>
-            <span>
+            <span className='underline'>
               SPENCER ATTICK
             </span>
           </h1>
           <h3>
-            <span>
+            <span className='underline'>
               he/him
             </span>
           </h3>
           <p>
-            <span>
+            <span className='underline'>
               Software Engineer
             </span>
           </p>
