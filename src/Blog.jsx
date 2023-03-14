@@ -43,23 +43,18 @@ function getDate(time) {
   return `${splitDate[1]} ${splitDate[2]} ${splitDate[3]}`;
 } 
 
-const getSixRandomPostsOrMax = (data) => {
-  let sixRandom = [];
-  let random;
+const getSixPostsOrMax = (data) => {
+  let posts = [];
 
-  if (data.length <= 6) {
-    sixRandom = data;
-  } else {
-    while (sixRandom.length < 6) {
-      random = Math.floor(Math.random() * data.length - 1);
-      if (data[random] === undefined || data[random].title.includes('Project')) {
-        continue;
-      }
-      sixRandom.push(data[random]);
-      data.splice(random, 1);
+  for (let post of data) {
+    if (posts.length === 6) {
+      return posts;
+    }
+    if (!post.title.includes('Project')) {
+      posts.push(post);
     }
   }
-  return sixRandom;
+  return posts;
 }
 
 
@@ -69,7 +64,7 @@ const getSixRandomPostsOrMax = (data) => {
       try {
         const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/posts`);
         const data = await response.json();
-        setBlogPosts(getSixRandomPostsOrMax(data));
+        setBlogPosts(getSixPostsOrMax(data));
       } catch (error) {
         console.log(error)
         setError(error);

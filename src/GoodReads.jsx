@@ -22,7 +22,6 @@ export default function GoodReads() {
       const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/feed`);
       const data = await response.json();
       setGoodReadsFeed(data);
-    //    console.log(data.items)
     } catch (error) {
       console.log(error)
       setError(error);
@@ -45,7 +44,6 @@ export default function GoodReads() {
   
   const textToDisplay = item => {
     let text;
-    console.log(item)
     if (item.title.includes('wants to read')) {
       text = `added to list ${getDate(item.created)}`
     } if (item.title.includes('finished reading')) {
