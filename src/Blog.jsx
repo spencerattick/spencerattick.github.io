@@ -5,6 +5,7 @@ import '../style/blog.css';
 // [] design each component that will display this information
 // [] maybe work it out so that a randomized 6 articles display?
 // [] refactor all functions to arrow
+// [] don't show 'Project' posts
 
 
 export default function Blog() {
@@ -51,7 +52,7 @@ const getSixRandomPostsOrMax = (data) => {
   } else {
     while (sixRandom.length < 6) {
       random = Math.floor(Math.random() * data.length - 1);
-      if (data[random] === undefined) {
+      if (data[random] === undefined || data[random].title.includes('Project')) {
         continue;
       }
       sixRandom.push(data[random]);

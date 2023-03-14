@@ -73,12 +73,12 @@ const techStack = [
 export default function TechStack() {
     return (
         <div>
-            <h2>TECH STACK</h2>
+           <h2 id="tech-stack-h2">TECH STACK</h2>
             <div id="tech-stack">
                 {techStack.map((tech) => 
                     <div    
                         className="techIconDiv"
-                        key={tech.name} 
+                    key={tech.name} 
                     >
                          <FontAwesomeIcon 
                     className="techIcon" 

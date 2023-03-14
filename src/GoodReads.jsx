@@ -47,9 +47,11 @@ export default function GoodReads() {
     let text;
     console.log(item)
     if (item.title.includes('wants to read')) {
-      text = 'want to read'
+      text = `added to list ${getDate(item.created)}`
     } if (item.title.includes('finished reading')) {
       text = `finished on ${getDate(item.created)}`
+    } if (item.title.includes('started reading') || item.title.includes('currently reading')) {
+      text = `started reading on ${getDate(item.created)}`
     }
     return text;
   }

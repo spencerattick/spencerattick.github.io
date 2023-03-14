@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    background-color: black;
 
 }
 
@@ -10,26 +11,34 @@
 }
 
 .techIcon {
-    font-size: 8vw;
+    font-size: 7vw;
     padding: 6%;
     transition: 300ms;
+    color: darkcyan;
 }
 
 
 .techIcon:hover + .hide {
     visibility: visible;
     font-size: 8vw;
-    color: darkcyan;
+    color: white;
   }
 
-/* .hide {
+.hide {
     visibility: hidden;
     transition: 300ms;
-  } */
+  }
 
   #tech-stack p {
     font-size: 2vw;
     text-align: center;
     padding-right: 5%;
+  }
+
+  #tech-stack-h2 {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding-top: 5%;
   }
 
