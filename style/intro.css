@@ -20,7 +20,8 @@
 
 .underline {
     border-bottom: 4px solid #FF5349;
-    border-radius: 10px;
+    border-right: 4px solid #FF5349;
+    /* border-radius: 10px; */
 }
 
 #intro::before {
@@ -42,7 +43,7 @@
 
 span {
     background-color: black;
-    padding: 1%;
+    padding: 1.2%;
 }
 
 h1, h3, h2, p {

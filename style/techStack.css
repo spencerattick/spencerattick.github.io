@@ -21,8 +21,12 @@
 .techIcon:hover + .hide {
     visibility: visible;
     font-size: 8vw;
-    color: white;
+    color: #FF5349;
   }
+
+  /* .techIcon:hover {
+    display: none;
+  } */
 
 .hide {
     visibility: hidden;
@@ -37,7 +41,7 @@
 
   #tech-stack-h2 {
     text-align: center;
-    color: white;
+    color: #FF5349;
     background-color: black;
     padding-top: 5%;
   }
