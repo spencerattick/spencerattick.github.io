@@ -73,7 +73,7 @@ const techStack = [
 export default function TechStack() {
     return (
         <div>
-           <h2 id="tech-stack-h2">TECH STACK</h2>
+           <h2 id="tech-stack-h2">Tech Stack</h2>
             <div id="tech-stack">
                 {techStack.map((tech) => 
                     <div    

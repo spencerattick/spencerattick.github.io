@@ -84,7 +84,7 @@ const getSixRandomPostsOrMax = (data) => {
 
     return (
         <div id="blog">
-          <h2>BLOG</h2>
+          <h2>Blog</h2>
           <div id="blog-posts">
             {blogPosts.length > 1 ? (blogPosts.map((post) => {
               const imgURL = getImgURL(post.content);
