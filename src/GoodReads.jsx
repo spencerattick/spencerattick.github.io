@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../style/goodreads.css'
 
-// [ ] add date of book finished
+// [ ] on hover move book image up a bit and then display the started/read meta data
 // [ ] add link to see more 
 // [ ] need to handle serving the Wants to Read books too but should specifiy which is which
  

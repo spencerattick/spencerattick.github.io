@@ -1,4 +1,9 @@
 #about-me p {
-    /* background-color: black; */
     padding-top: 25%;
+}
+
+#about-me .underline {
+    text-decoration: underline;
+    background-color: white important!;
+    text-decoration-color: #FF5349;
 }

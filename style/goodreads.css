@@ -3,32 +3,47 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding-bottom: 15%;
+    padding-bottom: 10%;
   }
   
   .book-div {
     width: auto;
     height: 170px;
-    padding: 3%;
+    padding: 4%;
+    overflow: hidden; /* to hide the part of image that will move up */
   }
   
   .book-div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease; /* add transition property */
   }
-
+  
+  .book-div:hover img {
+    transform: translateY(-15px); /* move the image up on hover */
+  }
+  
+  .book-div:hover p {
+    visibility: visible !important;
+    color: black;
+    font-size: 20% !important;
+  }
+  
   #goodreads h2 {
     padding-bottom: 3%;
   }
-
+  
   #goodreads p {
     font-size: 2%;
-    color: #000;
+    color: black;
     /* font-style: italic; */
-    font-weight: 300;
+    /* font-weight: 300; */
+    visibility: hidden;
+    transition: 100ms;
+    /* margin-bottom: 2% !important; */
   }
-
+  
   #goodreads a {
     text-decoration: none;
   }

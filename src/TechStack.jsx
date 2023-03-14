@@ -13,51 +13,51 @@ import { faKeyboard } from '@fortawesome/free-solid-svg-icons';
 
 const techStack = [
     {
-        name: 'react',
+        name: 'React',
         logo: faReact
     },
     {
-        name: 'yarn',
+        name: 'Yarn',
         logo: faYarn
     },
     {
-        name: 'javascript',
+        name: 'Javascript',
         logo: faJs
     },
     {
-        name: 'css',
+        name: 'CSS',
         logo: faCss3Alt
     },
     {
-        name: 'git',
+        name: 'Git',
         logo: faGit
     },
     {
-        name: 'jira',
+        name: 'JIRA',
         logo: faJira
     },
     {
-        name: 'node',
+        name: 'Node',
         logo: faNode
     },
     {
-        name: 'github',
+        name: 'Github',
         logo: faGithub
     },
     {
-        name: 'html',
+        name: 'HTML5',
         logo: faHtml5
     },
     {
-        name: 'trello',
+        name: 'Trello',
         logo: faTrello
     },
     {
-        name: 'typescript',
+        name: 'TypeScript',
         logo: faKeyboard
     },
     {
-        name: 'sketch',
+        name: 'Sketch',
         logo: faSketch
     },
     {
@@ -65,7 +65,7 @@ const techStack = [
         logo: faNpm
     },
     {
-        name: 'markdown',
+        name: 'Markdown',
         logo: faMarkdown
     }
 ];
