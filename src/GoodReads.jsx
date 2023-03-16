@@ -28,13 +28,6 @@ export default function GoodReads() {
     }
   }
 
-//   function getBookTitle(book) {
-//     const title = book.title;
-//     const parsedTitle = title.substring(title.indexOf("'") + 1, title.length - 1);
-
-//     return parsedTitle;
-//   }
-
   const getDate = time => {
     const parsedTimestamp = time.toString().slice(0, -3);
     const date = new Date(parsedTimestamp * 1000).toDateString();

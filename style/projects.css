@@ -1,0 +1,39 @@
+#projects h2 {
+    padding: 2rem;
+  }
+  
+  #projects img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #projects #posts-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  #projects .post {
+    max-width: 40%;
+    padding: 4%;
+    transition: 400ms;
+    position: relative;
+    height: 50vh; /* set relative height for all posts */
+  }
+  
+  #projects .post:hover {
+    max-width: 42%;
+    /* border: 10px solid darkcyan; */
+  }
+  
+  #projects p {
+    color: #ff5349;
+    text-align: center;
+    position: absolute;
+    top: 50%; /* center the text vertically */
+    left: 50%; /* center the text horizontally */
+    transform: translate(-50%, -50%); /* adjust position to center text */
+    z-index: 1;
+    font-size: 1.2rem;
+  }
