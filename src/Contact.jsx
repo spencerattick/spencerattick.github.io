@@ -36,7 +36,7 @@ const contactMethods = [{
   {
     method: 'resume',
     icon: faFile,
-    link: ''
+    link: '../assests/SpencerAttickPortfolio.pdf'
   }];
 
 export default function Contact() {

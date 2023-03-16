@@ -11,14 +11,17 @@
 }
 
 #blog .post {
-    width: 100%;
+    width: 90%;
     margin: 1%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     text-align: center;
     padding: 1%;
     box-sizing: border-box;
-    /* background-color: white; */
+    transition: 300ms;
+}
 
+#blog .post:hover {
+    width: 100%;
 }
 
 .post img {

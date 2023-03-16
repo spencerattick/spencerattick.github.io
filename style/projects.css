@@ -19,12 +19,12 @@
     padding: 4%;
     transition: 400ms;
     position: relative;
-    height: 50vh; /* set relative height for all posts */
+    height: 50vh;
   }
   
   #projects .post:hover {
     max-width: 43%;
-    /* border: 10px solid darkcyan; */
+    
   }
   
   #projects p {
