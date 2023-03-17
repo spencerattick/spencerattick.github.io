@@ -7,6 +7,7 @@ import '../style/aboutMe.css';
 // [ ] maybe another small photo here (Char has one)
 //good reads have an api? maybe new component for what im reading?
 //maybe another section of like three icons that represent stuff about me? (life longer learner, hardworker, etc?)
+// [] toggle between dark and light mode
 
 // [ ] https://www.goodreads.com/user/show/104822881-spencer-attick SEE IF YOU CAN FIND AN RSS FEED  - this is the link to my profile (maybe this https://www.goodreads.com/user/updates_rss/104822881)
 

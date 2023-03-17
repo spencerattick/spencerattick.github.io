@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../style/projects.css';
 
 //[] https://freefrontend.com/css-cards/ see if either the projects or the blogs can be spiced up with anything there
+//[] remove the word 'project' from the project titles
 
 
 

@@ -4,6 +4,7 @@ import '../style/goodreads.css'
 // [ ] on hover move book image up a bit and then display the started/read meta data
 // [ ] add link to see more 
 // [ ] need to handle serving the Wants to Read books too but should specifiy which is which
+// [] request maybe doesn't go through on mobile - if a real request doesn't work for whatever reason then might be a good idea to have a static set of assests for this component and the blog
  
 export default function GoodReads() {
 
