@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../style/blog.css';
 
-import { parse } from 'rss-to-json';
-
-
 
 // [] design each component that will display this information
 // [] maybe work it out so that a randomized 6 articles display?
@@ -19,6 +16,7 @@ export default function Blog() {
 
 //maybe refactor with regex?
 function getImgURL(content) { 
+  console.log('CONTENTT: ', content)
   let dataParsed = content.split('<');
   let lineWithImg;
   let imgURL;
@@ -65,9 +63,8 @@ const getSixPostsOrMax = (data) => {
   useEffect(() => {
     async function fetchBlogPosts() {
       try {
-        const response = await fetch('https://medium.com/feed/@spencer.attick');
+        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/posts`);
         const data = await response.json();
-        console.log('DATAAA: ', data)
         setBlogPosts(getSixPostsOrMax(data));
       } catch (error) {
         console.log(error)

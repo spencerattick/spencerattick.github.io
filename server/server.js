@@ -15,15 +15,15 @@ app.use(function(req, res, next) {
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // API routes
-// app.get('/api/posts', async (req, res) => {
-//   try {
-//     const blogRss = await parse('https://medium.com/feed/@spencer.attick');
-//     res.json(blogRss.items);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
+app.get('/api/posts', async (req, res) => {
+  try {
+    const blogRss = await parse('https://medium.com/feed/@spencer.attick');
+    res.json(blogRss.items);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 app.get('/api/feed', async (req, res) => {
   try {
