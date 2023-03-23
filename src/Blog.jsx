@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../style/blog.css';
+import staticFeed from '../assets/staticMediumFeed.json';
 
 
 // [] design each component that will display this information
@@ -16,7 +17,6 @@ export default function Blog() {
 
 //maybe refactor with regex?
 function getImgURL(content) { 
-  console.log('CONTENTT: ', content)
   let dataParsed = content.split('<');
   let lineWithImg;
   let imgURL;
@@ -68,7 +68,7 @@ const getSixPostsOrMax = (data) => {
         setBlogPosts(getSixPostsOrMax(data));
       } catch (error) {
         console.log(error)
-        // setError(error);
+        setBlogPosts(getSixPostsOrMax(staticFeed.items));
       }
     }
     fetchBlogPosts();
