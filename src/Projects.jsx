@@ -16,9 +16,9 @@ export default function Projects() {
     let projects = [];
 
     for (let post of data) {
-      // if (post.title.includes('Project:')) {
+      if (post.title.includes('Project:')) {
         projects.push(post);
-      // }
+      }
     }
     return projects;
   }
