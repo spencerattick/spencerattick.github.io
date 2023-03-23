@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import '../style/goodreads.css'
+import staticFeed from '../assets/staticGoodreadsFeed.json';
 
 // [ ] on hover move book image up a bit and then display the started/read meta data
 // [ ] add link to see more 
 // [ ] need to handle serving the Wants to Read books too but should specifiy which is which
-// [] request maybe doesn't go through on mobile - if a real request doesn't work for whatever reason then might be a good idea to have a static set of assests for this component and the blog
+// [] request maybe doesn't go through on mobile - if a real request doesn't work for whatever reason then might be a good idea to have a static set of assets for this component and the blog
  
 export default function GoodReads() {
 
@@ -25,7 +26,8 @@ export default function GoodReads() {
       setGoodReadsFeed(data);
     } catch (error) {
       console.log(error)
-      setError(error);
+      setGoodReadsFeed(staticFeed);
+      // setError(error);
     }
   }
 
@@ -88,7 +90,9 @@ export default function GoodReads() {
                         );
                     })
                     ) : (
-                    <div>Loading...</div>
+                    <div>
+                      It looks like something went wrong. You can see what I'm reading here: <a href="https://www.goodreads.com/user/show/104822881-spencer-attick">Goodreads Feed</a>.
+                    </div>
                 )}
             </div>
         </div>

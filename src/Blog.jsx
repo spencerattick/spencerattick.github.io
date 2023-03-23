@@ -68,7 +68,7 @@ const getSixPostsOrMax = (data) => {
         setBlogPosts(getSixPostsOrMax(data));
       } catch (error) {
         console.log(error)
-        setError(error);
+        // setError(error);
       }
     }
     fetchBlogPosts();
@@ -96,7 +96,9 @@ const getSixPostsOrMax = (data) => {
                 </div>
               )
             })) : (
-              <div>Loading...</div>
+              <div>
+                It looks like something went wrong. You can check out my blog here: <a href="https://medium.com/@spencer.attick">Spencer's Blog</a>.
+              </div>
             )}
           </div>
         </div>

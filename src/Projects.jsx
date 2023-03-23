@@ -30,7 +30,7 @@ export default function Projects() {
         setProjectPosts(getProjectPosts(data));
       } catch (error) {
         console.log(error)
-        setError(error);
+        // setError(error);
       }
     }
     fetchBlogPosts();
@@ -76,7 +76,9 @@ export default function Projects() {
                 )
               })
             ) : (
-              <div>Loading...</div>
+              <div>
+                The server appears to be down at the moment. You can check out my projects here: <a href="https://medium.com/@spencer.attick">Spencer's Blog</a>.
+              </div>
             )}
           </div>
 

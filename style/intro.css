@@ -26,7 +26,7 @@
 
 #intro::before {
     content: "";
-    background-image: url("../assests/test2.png");
+    background-image: url("../assets/test2.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
