@@ -1,13 +1,11 @@
 #blog {
-    padding-bottom: 20%;
-    /* background-color: black; */
+    padding-bottom: 5%;
 }
 
 #blog-posts {
     display: flex;
     justify-content: space-around;
     padding: 5%;
-    /* background-color: white; */
 }
 
 #blog .post {
