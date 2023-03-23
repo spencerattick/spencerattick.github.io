@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style/aboutMe.css';
+import aboutMeImg from '../assets/aboutMe.png'
 
 // [] read some advice on writing About Mes
 // [] write About Me
@@ -15,7 +16,7 @@ export default function AboutMe() {
     return (
         <div id='about-me'>
           <p>
-            <img src="../assets/test3.png" alt="" />
+            <img src={aboutMeImg} alt="" />
             Hi, I'm Spencer! I have a passion
              for writing great code and solving technical problems. I've worked in the tech industry for over four years now and have learned a ton along the way. Keep scrolling to take a look at what I've been up to!
           </p>
