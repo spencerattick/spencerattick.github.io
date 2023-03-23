@@ -15,8 +15,8 @@ export default function App() {
         <div>
             <Intro />
             <AboutMe />
-            <TechStack />
             <Projects />
+            <TechStack />
             <Blog />
             <GoodReads />
             <Contact />

@@ -1,5 +1,9 @@
+#projects {
+  padding-bottom: 8%;
+}
+
 #projects h2 {
-    padding: 2rem;
+    padding-bottom: 2rem;
   }
   
   #projects img {
