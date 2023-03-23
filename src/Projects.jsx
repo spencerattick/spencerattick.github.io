@@ -57,6 +57,11 @@ export default function Projects() {
      }
   }
 
+  const removeProjectFromTitle = title => {
+    const cleanedTitle = title.replace('Project: ', '');
+    return cleanedTitle;
+  }
+
 
     return (
         <div id="projects">
@@ -64,13 +69,14 @@ export default function Projects() {
           <div id='posts-container'>
             {projectPosts.length > 0 ? (projectPosts.map((post) => {
                 const postImg = getImgURL(post.content);
+                const cleanedTitle = removeProjectFromTitle(post.title);
                 return (
                   <div key={post.id} className='post'>
                     <a href={post.id} target="_blank">
                       <img src={postImg} alt="" />
                       <p>
                       <span>
-                      {post.title}
+                      {cleanedTitle}
                       </span>
                       </p>
                     </a>
