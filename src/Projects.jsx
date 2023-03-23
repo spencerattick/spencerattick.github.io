@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../style/projects.css';
+import staticFeed from '../assets/staticMediumFeed.json';
 
 //[] https://freefrontend.com/css-cards/ see if either the projects or the blogs can be spiced up with anything there
 //[] remove the word 'project' from the project titles
@@ -30,6 +31,7 @@ export default function Projects() {
         setProjectPosts(getProjectPosts(data));
       } catch (error) {
         console.log(error)
+        setProjectPosts(getProjectPosts(staticFeed.items));
         // setError(error);
       }
     }
