@@ -40,4 +40,5 @@
     transform: translate(-50%, -50%); /* adjust position to center text */
     z-index: 1;
     font-size: 1.2rem;
+    line-height: 30px;
   }
