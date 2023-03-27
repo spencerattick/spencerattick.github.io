@@ -5,6 +5,7 @@ import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
 
 
 import '../style/contact.css'
+import portfolio from '../assets/SpencerAttickPortfolio.pdf';
 
 // [] fill in resume
 // [] make contact bar static so it shows up no matter where the user is? (could be bottom of the page or on the side)
@@ -36,7 +37,7 @@ const contactMethods = [{
   {
     method: 'resume',
     icon: faFile,
-    link: '../assets/SpencerAttickPortfolio.pdf'
+    link: portfolio
   }];
 
 export default function Contact() {

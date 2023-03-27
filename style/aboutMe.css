@@ -1,11 +1,14 @@
 #about-me p {
     padding-top: 20%;
+    padding-bottom: 15% !important;
 }
 
 #about-me .underline {
     text-decoration: underline;
-    background-color: white important!;
+    /* background-color: white important!; */
     text-decoration-color: #FF5349;
+    margin: 5%;
+    /* margin-bottom:10% ; */
 }
 
 #about-me img {
