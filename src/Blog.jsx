@@ -3,10 +3,8 @@ import '../style/blog.css';
 import staticFeed from '../assets/staticMediumFeed.json';
 
 
-// [] design each component that will display this information
 // [] maybe work it out so that a randomized 6 articles display?
 // [] refactor all functions to arrow
-// [] don't show 'Project' posts
 
 
 export default function Blog() {
@@ -16,7 +14,7 @@ export default function Blog() {
 
 
 //maybe refactor with regex?
-function getImgURL(content) { 
+const getImgURL = content => {
   let dataParsed = content.split('<');
   let lineWithImg;
   let imgURL;
@@ -35,16 +33,16 @@ function getImgURL(content) {
    }
 }
 
-
-function getDate(time) {
+const getDate = time => {
   //remove three trailing 0s Medium sets in the timestamp
   const parsedTimestamp = time.toString().slice(0, -3);
   const date = new Date(parsedTimestamp * 1000).toDateString();
   const splitDate = date.split(' ');
   return `${splitDate[1]} ${splitDate[2]} ${splitDate[3]}`;
-} 
+}
 
-const getSixPostsOrMax = (data) => {
+
+const getSixPostsOrMax = data => {
   let posts = [];
 
   for (let post of data) {

@@ -5,7 +5,7 @@ import staticFeed from '../assets/staticGoodreadsFeed.json';
 // [ ] on hover move book image up a bit and then display the started/read meta data
 // [ ] add link to see more 
 // [ ] need to handle serving the Wants to Read books too but should specifiy which is which
-// [] request maybe doesn't go through on mobile - if a real request doesn't work for whatever reason then might be a good idea to have a static set of assets for this component and the blog
+
  
 export default function GoodReads() {
 
@@ -19,7 +19,7 @@ export default function GoodReads() {
   }, []);
 
 
-  async function fetchGoodReadsFeed() {
+  const fetchGoodReadsFeed = async () => {
     try {
       const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/feed`);
       const data = await response.json();
@@ -51,7 +51,7 @@ export default function GoodReads() {
   }
   
 
-  function getBookImg(book) {
+  const getBookImg = book => {
     const description = book.description;
     const start = description.indexOf('books/') + 5;
     const end =  description.indexOf('.jpg');
