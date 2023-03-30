@@ -3,10 +3,6 @@ import '../style/blog.css';
 import staticFeed from '../assets/staticMediumFeed.json';
 
 
-// [] maybe work it out so that a randomized 6 articles display?
-// [] refactor all functions to arrow
-
-
 export default function Blog() {
 
   const [blogPosts, setBlogPosts] = useState([]);
@@ -85,8 +81,11 @@ const getSixPostsOrMax = data => {
               const date = getDate(post.created);
               return (
                 <div key={post.id} className="post">
-                  <a href={post.id} target="_blank">
-                    <img src={imgURL} alt="" />
+                  <a 
+                    href={post.id} 
+                    target="_blank"
+                  >
+                    <img src={imgURL} alt={post.title} />
                     <p className="date">{date}</p>
                     <p>{post.title}</p>
                     

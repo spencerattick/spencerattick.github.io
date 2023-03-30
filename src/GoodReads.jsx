@@ -5,6 +5,7 @@ import staticFeed from '../assets/staticGoodreadsFeed.json';
 // [ ] on hover move book image up a bit and then display the started/read meta data
 // [ ] add link to see more 
 // [ ] need to handle serving the Wants to Read books too but should specifiy which is which
+// [ ] check to make sure the alt text is coming through correctly 
 
  
 export default function GoodReads() {
@@ -66,6 +67,12 @@ export default function GoodReads() {
     return imgURL;
   }
 
+  const getBookTitle = title => {
+    title = title.substring(title.indexOf("'") + 1);
+    title = title.slice(0, -1);
+    return title;
+  }
+
   if (error) {
     return <div>Error: {error.message}</div>;
   }
@@ -77,12 +84,12 @@ export default function GoodReads() {
                 {goodReadsFeed.items ? (
                     goodReadsFeed.items.map((book, key) => {
                         const bookImg = getBookImg(book);
-                        // const bookTitle = getBookTitle(book);
+                        const bookTitle = getBookTitle(book.title);
                         const text = textToDisplay(book);
                         return (
                         <div key={key} className="book-div">
                             <a href={book.link} target="_blank">
-                                <img src={bookImg} alt="" />
+                                <img src={bookImg} alt={bookTitle} />
                                 <p>{text}</p>
                             </a>
                           
