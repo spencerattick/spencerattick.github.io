@@ -73,7 +73,7 @@ export default function Projects() {
                 return (
                   <div key={post.id} className='post'>
                     <a href={post.id} target="_blank">
-                      <img src={postImg} alt="" />
+                      <img src={postImg} alt={cleanedTitle} />
                       <p>
                       <span>
                       {cleanedTitle}

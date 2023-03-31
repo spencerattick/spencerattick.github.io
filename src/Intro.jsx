@@ -1,8 +1,6 @@
 import React from 'react'
 import '../style/intro.css'
 
-// [ ] what is the difference between Into and About? have to look at some examples
-// [ ] reduce the brightness of background image?
 
 // this seems interesting: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_blurred_bg
 
@@ -11,7 +9,7 @@ import '../style/intro.css'
 
 export default function Intro() {
     return (
-        <div id='intro'>
+        <div id='intro' title='Spencer road cycling up a hill near the Pacific Ocean'>
           <h1>
             <span className='underline'>
               SPENCER ATTICK
