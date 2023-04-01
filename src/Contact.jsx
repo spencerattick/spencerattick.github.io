@@ -9,14 +9,6 @@ import portfolio from '../assets/SpencerAttickPortfolio.pdf';
 
 //[ ] make links accessible https://www.a11yproject.com/posts/creating-valid-and-accessible-links/
 
-//[ ] make images accessible
-
-// [] if you can do everything with the brand icons then delete the other two packages (font awesome)
-// [ ] do accessibility course and make sure this page is accessible (maybe add an icon to further demonstrate that)
-// [ ] on hover each icon grows
-
-// https://github.com/FortAwesome/Font-Awesome/issues/14854
-
 const contactMethods = [{
     method: 'email',
     icon: faEnvelope,

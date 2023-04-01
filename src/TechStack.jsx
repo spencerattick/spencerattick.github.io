@@ -5,10 +5,7 @@ import { faNode, faCss3Alt, faReact, faJs, faGithub, faHtml5, faTrello, faJira, 
 import { faKeyboard } from '@fortawesome/free-solid-svg-icons';
 
 
-// [] fill out techStack arr
-// [] figure out how to store and render each logo
 // [] maybe give each a progress bar based on how well I know each thing?
-// [] on hover have icon grow/change color and display the name of the tech 
 
 
 const techStack = [

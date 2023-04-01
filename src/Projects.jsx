@@ -6,8 +6,6 @@ import staticFeed from '../assets/staticMediumFeed.json';
 //[] remove the word 'project' from the project titles
 
 
-
-
 export default function Projects() {
   const [projectPosts, setProjectPosts] = useState([]);
   const [error, setError] = useState(null);
