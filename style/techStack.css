@@ -6,6 +6,10 @@
 
 }
 
+#tech-stack a {
+  text-decoration: none;
+}
+
 .techIconDiv {
     padding: 6%;
 }

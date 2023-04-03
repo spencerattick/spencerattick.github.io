@@ -2,7 +2,7 @@ import React from 'react';
 import '../style/techStack.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNode, faCss3Alt, faReact, faJs, faGithub, faHtml5, faTrello, faJira, faSketch, faNpm, faMarkdown, faYarn, faGit } from '@fortawesome/free-brands-svg-icons';
-import { faKeyboard } from '@fortawesome/free-solid-svg-icons';
+import { faKeyboard, faMugHot } from '@fortawesome/free-solid-svg-icons';
 
 
 // [] maybe give each a progress bar based on how well I know each thing?
@@ -11,59 +11,79 @@ import { faKeyboard } from '@fortawesome/free-solid-svg-icons';
 const techStack = [
     {
         name: 'React',
-        logo: faReact
+        logo: faReact,
+        link: 'https://react.dev/'
     },
     {
         name: 'Yarn',
-        logo: faYarn
+        logo: faYarn,
+        link: 'https://classic.yarnpkg.com/lang/en/'
+
     },
     {
         name: 'Javascript',
-        logo: faJs
+        logo: faJs,
+        link: 'https://www.javascript.com/'
     },
     {
         name: 'CSS',
-        logo: faCss3Alt
+        logo: faCss3Alt,
+        link: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
     },
     {
         name: 'Git',
-        logo: faGit
+        logo: faGit,
+        link: 'https://git-scm.com/'
     },
     {
         name: 'JIRA',
-        logo: faJira
+        logo: faJira,
+        link: 'https://www.atlassian.com/software/jira'
     },
     {
         name: 'Node',
-        logo: faNode
+        logo: faNode,
+        link: 'https://nodejs.org/en'
     },
     {
         name: 'Github',
-        logo: faGithub
+        logo: faGithub,
+        link: 'https://github.com/'
     },
     {
         name: 'HTML5',
-        logo: faHtml5
+        logo: faHtml5,
+        link: 'https://developer.mozilla.org/en-US/docs/Glossary/HTML5'
     },
     {
         name: 'Trello',
-        logo: faTrello
+        logo: faTrello,
+        link: 'https://www.atlassian.com/software/trello'
     },
     {
         name: 'TypeScript',
-        logo: faKeyboard
+        logo: faKeyboard,
+        link: 'https://www.typescriptlang.org/'
     },
     {
         name: 'Sketch',
-        logo: faSketch
+        logo: faSketch,
+        link: 'https://www.sketch.com/'
+    },
+    {
+        name: 'Mocha',
+        logo: faMugHot,
+        link: 'https://mochajs.org/'
     },
     {
         name: 'npm',
-        logo: faNpm
+        logo: faNpm,
+        link: 'https://npmjs.com/'
     },
     {
         name: 'Markdown',
-        logo: faMarkdown
+        logo: faMarkdown,
+        link: 'https://www.markdownguide.org/'
     }
 ];
 
@@ -77,13 +97,15 @@ export default function TechStack() {
                         className="techIconDiv"
                     key={tech.name} 
                     >
-                         <FontAwesomeIcon 
-                    className="techIcon" 
-                    icon={tech.logo} /> 
-                        <p className="hide">
-                            {tech.name}
-                        </p>
-
+                        <a href={tech.link} target='_blank'>
+                            <FontAwesomeIcon 
+                        className="techIcon" 
+                        icon={tech.logo} /> 
+                            <p className="hide">
+                                {tech.name}
+                            </p>
+                        </a>
+                  
                     </div>
                    
                 )}
