@@ -4,7 +4,7 @@ import aboutMeImg from '../assets/aboutMe.png'
 
 // [] read some advice on writing About Mes
 //maybe another section of like three icons that represent stuff about me? (life longer learner, hardworker, etc?)
-// [] toggle between dark and light mode
+// [] toggle between dark and light mode: youtube.com/watch?v=wodWDIdV9BY
 // [ ] https://www.goodreads.com/user/show/104822881-spencer-attick SEE IF YOU CAN FIND AN RSS FEED  - this is the link to my profile (maybe this https://www.goodreads.com/user/updates_rss/104822881)
 
 export default function AboutMe() {
