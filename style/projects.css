@@ -2,6 +2,11 @@
   padding-bottom: 8%;
 }
 
+#projects span {
+  font-size: 1.75em;
+  line-height: 1.25;
+}
+
 #projects h2 {
     padding-bottom: 2rem;
   }
