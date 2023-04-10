@@ -8,6 +8,7 @@
   
   .book-div {
     width: auto;
+    max-width: 120px;
     height: 170px;
     padding: 4%;
     overflow: hidden; /* to hide the part of image that will move up */

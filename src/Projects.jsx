@@ -4,6 +4,7 @@ import staticFeed from '../assets/staticMediumFeed.json';
 
 //[] https://freefrontend.com/css-cards/ see if either the projects or the blogs can be spiced up with anything there
 //[] remove the word 'project' from the project titles
+//[] RSS stream doesn't support emoji - will have to figure something else out
 
 
 export default function Projects() {
@@ -14,7 +15,7 @@ export default function Projects() {
     let projects = [];
 
     for (let post of data) {
-      if (post.title.includes('Project:')) {
+      if (post.title.includes('Project:') || post.title.includes('🧑‍💻')) {
         projects.push(post);
       }
     }
