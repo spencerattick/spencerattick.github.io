@@ -57,7 +57,7 @@ const getSixPostsOrMax = data => {
   useEffect(() => {
     async function fetchBlogPosts() {
       try {
-        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/posts`);
+        const response = await fetch(`http://localhost:3000/api/posts`);
         const data = await response.json();
         setBlogPosts(getSixPostsOrMax(data));
       } catch (error) {

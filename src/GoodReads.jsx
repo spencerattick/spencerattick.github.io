@@ -22,7 +22,7 @@ export default function GoodReads() {
 
   const fetchGoodReadsFeed = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/feed`);
+      const response = await fetch(`http://localhost:3000/api/feed`);
       const data = await response.json();
       setGoodReadsFeed(data);
     } catch (error) {
